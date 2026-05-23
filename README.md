@@ -34,8 +34,7 @@ Target architecture:
 [VectorCore HSS]
 ```
 
-VectorCore AAA remains the 3GPP EAP-AKA/EAP-AKA' server. The AAA must not be
-changed to expose private strongSwan-specific AKA vectors over SWm.
+
 
 ## Legacy osmo_epdg plugin
 
@@ -156,14 +155,11 @@ The ePDG side is responsible for:
 
 ## AAA behavior
 
-VectorCore AAA must remain standards-oriented.
 
 The AAA is the EAP-AKA/EAP-AKA' server.
 
 SWm must use Diameter-EAP DER/DEA with `EAP-Payload`.
 
-AAA must not expose private `RAND/AUTN/XRES/CK/IK` tuples as the normal SWm
-contract.
 
 ## MSK / keying material requirement
 
@@ -173,11 +169,6 @@ strongSwan when authentication succeeds.
 The current implementation expects a 64-byte MSK from the ePDG/AAA path on EAP
 success.
 
-If VectorCore AAA does not include `EAP-Master-Session-Key` or equivalent
-standards-correct keying material in the SWm success response, IKE_AUTH will
-fail with a missing-MSK condition by design.
-
-Do not bypass this check.
 
 ## Current validation status
 
