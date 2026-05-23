@@ -101,6 +101,7 @@ plugins = \
 	plugins/tpm.opt \
 	plugins/unbound.opt \
 	plugins/updown.opt \
+	plugins/vectorcore-eap-proxy.opt \
 	plugins/vici.opt \
 	plugins/whitelist.opt \
 	plugins/wolfssl.opt \

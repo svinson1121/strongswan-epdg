@@ -439,6 +439,13 @@ if MONOLITHIC
 endif
 endif
 
+if USE_VECTORCORE_EAP_PROXY
+  SUBDIRS += plugins/vectorcore_eap_proxy
+if MONOLITHIC
+  libcharon_la_LIBADD += plugins/vectorcore_eap_proxy/libstrongswan-vectorcore-eap-proxy.la
+endif
+endif
+
 if USE_EAP_TLS
   SUBDIRS += plugins/eap_tls
 if MONOLITHIC

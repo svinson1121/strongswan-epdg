@@ -1,0 +1,5 @@
+charon.plugins.vectorcore-eap-proxy.socket = /run/vectorcore/epdg-eap.sock
+	Local Unix domain socket used by the VectorCore EAP proxy plugin to relay
+	raw EAP messages to vectorcore-epdg. The plugin is the VectorCore
+	standards-mode path for SWm Diameter-EAP. It does not request AKA vectors
+	and does not validate AKA responses locally.
